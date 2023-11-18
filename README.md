@@ -1,18 +1,49 @@
 # Food-Recipe-Study
+**Authors**: Hikaru Isayama, Julia Jung
 
 ---
 
-## Overview
+## Introduction and Question Identification
 
-Welcome to Project 3! 👋
+This data science project investigates the relationship between the number of ingredients (#) and amount of calories from the recipes and reviews posted since 2008 on food.com. With the continuing concerns about health in the US, having a more accurate understanding of calorie intake helps maintain a healthy weight, as consuming too many calories can lead to weight gain and associated health issues like obesity, diabetes, and heart problems. This project investigates a new indicator (number of ingredients) to see whether or not this value has any impact on the amount of calories in the recipe.
 
-This project contains no new material. Rather, it's a good opportunity to sharpen your understanding of the core concepts of the first half of the course. It'll also give you practice with creating visualizations and websites, and will give you something concrete to put on your resume and show to potential employers!
+### Datasets used (food.com)
 
-The project is broken into two parts:
-- Part 1: An **analysis**, submitted as a Jupyter Notebook. This will contain the details of your work. **Focus on completing your analysis before moving to Part 2, as the analysis is the bulk of the project.**
-- Part 2: A **report**, submitted as a website. This will contain a narrative "story" with visuals. **Focus on this after finishing _most_ of your analysis.**
+The first dataset we used on this project contains recipes posted on food.com since 2008, containing 83782 rows representing each recipe posted, with each row consisting these 12 columns of descriptions: 
 
-{: .warning }
-**The project is due on Thursday, May 18th at 11:59PM**. While there is no checkpoint, we encourage you to finish Part 1 by Monday, May 15th, to leave yourself three days to review your analysis and prepare your report.<br><br>Like other projects, you're welcome to work with a partner, though if you do, you must **both** work on all pieces together, simultaneously. You will only submit one notebook and create one website.
+|Column	                 |Description|
+|---                     |---        |
+|`'name'	`            |Recipe name|
+|`'id'`	                 |Recipe ID|
+|`'minutes'`	         |Minutes to prepare recipe|
+|`'contributor_id'`	     |User ID who submitted this recipe|
+|`'submitted'`	            | Date recipe was submitted|
+|`'tags'`	              |Food.com tags for recipe|
+|`'nutrition'`	          |Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein    (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value”|
+|`'n_steps'`	          |Number of steps in recipe|
+|`'steps'`	              |Text for recipe steps, in order|
+|`'description'`	     | User-provided description|
+|`'ingredients'`	              |List of ingredients|
+|`'n_ingredients'`	     | Number of ingredients|
+
+The second dataset we used on this project contains reviews and ratings submitted for the recipes in the first dataset posted on food.com since 2008. This dataset contains 731927 rows representing each individual review, with these 5 columns of descriptions:
+
+|Column|Description|
+|---|---|
+|`'user_id'`	|User ID|
+|`'recipe_id'`	|Recipe ID|
+|`'date'`	|Date of interaction|
+|`'rating'`	|Rating given|
+|`'review'`	|Review text|
+
+As this project investigates the relationship between the number of ingredients and the amount of calories (#) in each recipe, the two columns we referenced the most were:
+
+1. The 'nutrition' column of the first dataset. This column contains information about the recipe in the following format: 
+
+"[calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)]"  
+
+To allow the calories (#) to be more accessible, we decided to create a new column called calories in the merged dataset, which we will reference instead of the entire 'nutrition' column
+
+2. The  ‘n_ingredients’ column of the first dataset. This column contains the value for the number of ingredients in the recipe, which we use to compare with the calorie value of that recipe.
 
 ---
