@@ -38,7 +38,7 @@ The second dataset we used on this project contains reviews and ratings submitte
 
 As this project investigates the relationship between the number of ingredients and the amount of calories (#) in each recipe, the two columns we referenced the most were:
 
-1. The 'nutrition' column of the first dataset. This column contains information about the recipe in the following format: <br><br>"[calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)]"<br><br>To allow the calories (#) to be more accessible, we decided to create a new column called calories in the merged dataset, which we will reference instead of the entire 'nutrition' column
+1. The 'nutrition' column of the first dataset. This column contains information about the recipe in the following format: <br><br>`'[calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)]'`<br><br>To allow the calories (#) to be more accessible, we decided to create a new column called calories in the merged dataset, which we will reference instead of the entire 'nutrition' column
 
 2. The  ‘n_ingredients’ column of the first dataset. This column contains the value for the number of ingredients in the recipe, which we use to compare with the calorie value of that recipe.
 
@@ -84,11 +84,13 @@ Above is another histogram that shows the distribution of the number of calories
 
 ### Bivariate Analysis
 
-As our study investigate the relationship between two quantitative variables (number of ingredients, amount of calories), we decided to plot our data on a scatter plot. 
+To create a visual for the relationship between the number of ingredients and the amount of calories (#), we decided to use a boxplot plotting the amount of calories against `'shopping_cart'`. We chose to use this graph for the purpose of easily being able to identify the min, quartile 1, median, quartile 3, max, and any outliers for each `'shopping_cart'` value.
 
 [IMAGE HERE]
 
-Above is a scatter plot with the number of ingredients on the x-axis, and the amount of calories (#) on the y-axis. We can observe that the scatter plot does not show a strong correlation between the two variables. In other words, the number of ingredients does not appear to have a significant effect on the amount of calories. 
+Here are the boxplots as described above – with the y-axis measuring the amount of calories, and the x-axis representing each value in the column `'shopping_cart'`. We can observe that there appears to be an increase in the values for quartile 1, median, quartile 3, and max as the size of the shopping cart increases (with the exception of the `'light'` boxplot). This information suggests that there may be a level of positive correlation between the size of `'shopping_cart'` (which represents the number of ingredients) and the amount of calories per recipe.
+
+
 
 ### Interesting Aggregates
 
