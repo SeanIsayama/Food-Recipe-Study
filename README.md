@@ -99,12 +99,17 @@ Here are the boxplots as described above – with the y-axis measuring the amoun
 
 In our dataset before we filtered, the `'description'` column could possibly be NMAR. This could be due to the reviewer’s interest in investing time or pride about the recipe, which is not measured in our dataset. For example, reviewers who have a lot of time at their hands may write descriptions for the recipes they submit, while those who do not may not. Similarly, reviewers who are more proud about the recipe they submit may be more motivated to write a description, while those who are not may omit it entirely. However, these values are not recorded in our dataset, therefore making the `'description'` column a NMAR.
 
-We can change the `'description'` column from NMAR to MAR if we include variables that measure the free time reviewers have, or how proud they are of the recipe. For example, if there was a rating scale of how proud they are about the recipe they submit, the missingness of the `'description'`column could be influenced by the low values measured on this new variable. 
+We can change the `'description'` column from NMAR to MAR if we include variables that measure the free time reviewers have, or how proud they are of the recipe. For example, if there was a rating scale of how proud they are about the recipe they submit, the missingness of the `'description'` column could be influenced by the low values measured on this new variable. 
 
 ### Missingness Dependency
 
 In the datasets, we noticed that there were several columns with missing values – with the `'description'` column being one of them. For our missingness analyses, we decided to investigate whether or not the missingness of `'description'` does/does not depend on `'n_steps'` (number of steps), and on `'n_ingredients.'` Running permutation tests to study the missingness, we discovered that:
 
+1. The missingness of rating **does** depend on `'n_steps'`. <br><br> **Null Hypothesis: The missingness of description does not depend on n_steps** <br><br> **Alternative Hypothesis: The missingness of description does not depend on n_steps** <br><br> For our test statistic, we chose to use the absolute difference in means as `'n_steps'` is a numerical variable. Firstly, we found our 
+
+Using the merged dataframe with the columns `'n_steps'` and `'description'`, 
+
+<iframe src="assets/missing_desc_steps.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 
