@@ -70,5 +70,47 @@ As mentioned above, we were provided two different datasets to use for our study
 8. Filter + select columns to use for study
 - For our project, we will extract the following columns required to perform our calculations and tests later in the study: `'n_ingredients'`, `'calorie'`,  `'shopping_cart'`. 
 
+### Univariate Analysis
+
+To display the distribution of the number of ingredients, and the distribution of  calories of each recipe in our cleaned dataset, we decided to use histograms for our graphical analysis. 
+
+[IMAGE HERE]
+
+Above is a histogram that shows the distribution of the number of ingredients per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 5-15 ingredient range, with most of the outliers more than the majority – leading to a right- skewed distribution. 
+
+[IMAGE HERE]
+
+Above is another histogram that shows the distribution of the number of calories per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 0-500 calorie range, with again most of the outliers being on the greater end – leading to a right-skewed distribution. 
+
+### Bivariate Analysis
+
+As our study investigate the relationship between two quantitative variables (number of ingredients, amount of calories), we decided to plot our data on a scatter plot. 
+
+[IMAGE HERE]
+
+Above is a scatter plot with the number of ingredients on the x-axis, and the amount of calories (#) on the y-axis. We can observe that the scatter plot does not show a strong correlation between the two variables. In other words, the number of ingredients does not appear to have a significant effect on the amount of calories. 
+
+### Interesting Aggregates
+
+---
+## Assessment of Missingness
+
+### NMAR Analysis
+
+In our dataset before we filtered, the `'description'` column could possibly be NMAR. This could be due to the reviewer’s interest in investing time or pride about the recipe, which is not measured in our dataset. For example, reviewers who have a lot of time at their hands may write descriptions for the recipes they submit, while those who do not may not. Similarly, reviewers who are more proud about the recipe they submit may be more motivated to write a description, while those who are not may omit it entirely. However, these values are not recorded in our dataset, therefore making the `'description'` column a NMAR.
+
+We can change the `'description'` column from NMAR to MAR if we include variables that measure the free time reviewers have, or how proud they are of the recipe. For example, if there was a rating scale of how proud they are about the recipe they submit, the missingness of the `'description'`column could be influenced by the low values measured on this new variable. 
+
+### Missingness Dependency
+
+---
+
+
+
+
+
+
+
+
 
 
