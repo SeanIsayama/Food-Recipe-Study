@@ -55,8 +55,7 @@ As this project investigates the relationship between the number of ingredients 
 As mentioned above, we were provided two different datasets to use for our study. In order to combine the datasets and extract the data required for this study, we followed this step to clean the given datasets:
 
 *Project guideline steps:*
-1. Left merge the recipes and interactions datasets together.
-- This step allows access to information in both datasets in a new singular dataframe.
+1. Left merge the recipes and interactions datasets together. <br> This step allows access to information in both datasets in a new singular dataframe.
 2. In the merged dataset, fill all ratings of 0 with '`'np.nan'` .
 - Examining the recipes on food.com, we discovered that ratings of 0 in the dataset indicates how the reviewer decided not to give a rating, rather than giving a rating of 0 (which is impossible, as the lowest rating is 1 star). Therefore, by replacing 0’s with np.nan, we are able to perform calculations more accurately.
 3. Find the average rating per recipe, as a Series.
