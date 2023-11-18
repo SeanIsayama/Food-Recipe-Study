@@ -105,7 +105,7 @@ We can change the `'description'` column from NMAR to MAR if we include variable
 
 In the datasets, we noticed that there were several columns with missing values – with the `'description'` column being one of them. For our missingness analyses, we decided to investigate whether or not the missingness of `'description'` does/does not depend on `'n_steps'` (number of steps), and on `'n_ingredients.'` Running permutation tests to study the missingness, we discovered that:
 
-#### 1. The missingness of rating **does** depend on `'n_steps'`. 
+#### **The missingness of rating **does** depend on `'n_steps'` (((MCAR))).**
 
 **Null Hypothesis: The missingness of description does not depend on `'n_steps'`** <br><br> **Alternative Hypothesis: The missingness of description does not depend on `'n_steps'`** 
 
@@ -121,7 +121,7 @@ In the distribution above, the red line indicates the observed test statistic of
 
 Therefore, using a significance level of 0.05, we **fail to reject** the null hypothesis – meaning that the missingness in the `'description'` column is not dependent on `'n_steps'`.
 
-#### 2. The missingness of rating **does not** depend on `'n_ingredients'`. 
+#### **The missingness of rating **does not** depend on `'n_ingredients'` (MAR).**
 
 **Null Hypothesis: The missingness of description does not depend on `'n_ingredients'`** 
 
