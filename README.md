@@ -74,11 +74,11 @@ As mentioned above, we were provided two different datasets to use for our study
 
 To display the distribution of the number of ingredients, and the distribution of  calories of each recipe in our cleaned dataset, we decided to use histograms for our graphical analysis. 
 
-[IMAGE HERE]
+<iframe src="assets/ingredients_hist.html" width=800 height=600 frameBorder=0></iframe>
 
 Above is a histogram that shows the distribution of the number of ingredients per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 5-15 ingredient range, with most of the outliers more than the majority – leading to a right- skewed distribution. 
 
-[IMAGE HERE]
+<iframe src="assets/calories_hist.html" width=800 height=600 frameBorder=0></iframe>
 
 Above is another histogram that shows the distribution of the number of calories per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 0-500 calorie range, with again most of the outliers being on the greater end – leading to a right-skewed distribution. 
 
@@ -86,7 +86,7 @@ Above is another histogram that shows the distribution of the number of calories
 
 To create a visual for the relationship between the number of ingredients and the amount of calories (#), we decided to use a boxplot plotting the amount of calories against `'shopping_cart'`. We chose to use this graph for the purpose of easily being able to identify the min, quartile 1, median, quartile 3, max, and any outliers for each `'shopping_cart'` value.
 
-[IMAGE HERE]
+<iframe src="assets/bivariate_box_plot.html" width=800 height=600 frameBorder=0></iframe>
 
 Here are the boxplots as described above – with the y-axis measuring the amount of calories, and the x-axis representing each value in the column `'shopping_cart'`. We can observe that there appears to be an increase in the values for quartile 1, median, quartile 3, and max as the size of the shopping cart increases (with the exception of the `'light'` boxplot). This information suggests that there may be a level of positive correlation between the size of `'shopping_cart'` (which represents the number of ingredients) and the amount of calories per recipe.
 
