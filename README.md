@@ -104,6 +104,8 @@ Here are the boxplots as described above – with the y-axis measuring the amoun
 
 ### Interesting Aggregates
 
+The boxplots in our bivariate analysis displays a visual representation of the distribution of each `'shopping_cart'` value. To investigate a more numerical analysis, we wll create a pivot table that shows the mean, median, min, and max calorie value for each distribution. 
+
 | shopping_cart | mean<br>calories| median<br>calories  | min<br>calories | max<br>calories |
 |--------------:|:----------------|:--------------------|----------------:|:----------------|
 |near empty     | 291.411553      | 180.6               | 0.0             | 2987.6          |
@@ -112,6 +114,8 @@ Here are the boxplots as described above – with the y-axis measuring the amoun
 |heavy          | 523.604491      | 438.1               | 2.5             | 2978.2          |
 |full           | 611.110988      | 510.8               | 24.4            | 2766.5          |
 |overflowing    | 722.479021      | 630.0               | 77.2            | 2935.9          |
+
+In the pivot table, we can see the trend of the mean, median, and min amount of calories increasing as the size of the `'shopping_cart'` increases - as we saw in our bivariate analysis. However, we can notice an interesting observation about how the max calories appear to be around the same for each row - indicating how the max amount of calories (when including outliers) tends to be around the same regardless of the `'shopping_cart'` size.
 
 ---
 ## Assessment of Missingness
@@ -192,7 +196,7 @@ comes from the same population, and the observed differences in our samples are 
 
 The graph below displays the empirical distribution of our test statistic in 1000 permutations, under the null hypothesis stated above. 
 
-<iframe src="assets/empirical_plot_ingred.html" width=800 height=600 frameBorder=0></iframe> 
+<iframe src="assets/hyp_test_plot.html" width=800 height=600 frameBorder=0></iframe> 
 
 From the graph above, we can see that the observed statistic is most likely not coincidental, as there were no cases in the 1000 simulation that resulted a test statistic equal to or more extreme than our observed statistic. From the simulation, we also found the p-value to be 0.0, which is less than our significane level of 0.05 for this hypothesis test. Therefore, we can reject the null hypothesis: the results of the test strongly suggest that the observed differences in our samples are not due to random chance, and that the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'overflowing'` tends to be greater than when `'shopping_cart'` is `'near_empty'`.
 
