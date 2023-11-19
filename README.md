@@ -130,7 +130,18 @@ We can change the `'description'` column from NMAR to MAR if we include variable
 
 ### Missingness Dependency
 
-In the datasets, we noticed that there were several columns with missing values – with the `'description'` column being one of them. For our missingness analyses, we decided to investigate whether or not the missingness of `'description'` does/does not depend on `'n_steps'` (number of steps), and on `'n_ingredients.'` Running permutation tests to study the missingness, we discovered that:
+In the datasets, we noticed that there were several columns with missing values – with the `'description'` column being one of them. For our missingness analyses, we decided to investigate whether or not the missingness of `'description'` does/does not depend on `'n_steps'` (number of steps), and on `'n_ingredients.'` 
+
+Here, we have a pivot table aggregating n_ingredients and n_steps by its mean, grouped by the missingness of `'description'`. 
+
+| description_status     | n_ingredients<br>| n_steps<br> |
+|-----------------------:|:-----------------|:------------|
+|Missing Description     | 7.695652         | 11.014493   |
+|Not Missing Description | 9.207793         | 10.079110   |
+
+We can see that the mean of `'n_ingredients'` when missing `'description'` is smaller then when it is not missing, while the mean of `'n_steps'` when missing `'description'` tends to be larger then when it is not missing.
+
+Running permutation tests to study the missingness, we discovered that:
 
 #### **1. The missingness of `'description'` does depend on `'n_steps'` (MCAR).**
 
