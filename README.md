@@ -8,11 +8,11 @@ This data science project investigates the relationship between the number of in
 
 ## Introduction and Question Identification
 
-With the continuing concerns about health in the US, having a more accurate understanding of calorie intake helps maintain a healthy weight, as consuming too many calories can lead to weight gain and associated health issues like obesity, diabetes, and heart problems. This project investigates a new indicator (number of ingredients) to see whether or not this value has any impact on the amount of calories in the recipe.
+With the continuing concerns about health in the US, having a more accurate understanding of what affects calorie intake helps maintain a healthy weight, as consuming too many calories can lead to weight gain and associated health issues like obesity, diabetes, and heart problems. This project tests a new indicator - number of ingredients in a recipe - to see whether or not this value has any impact on the amount of calories in the meal. In other words, we will investigate whether or not a greater number of ingredients in a recipe correlates to higher calories, by analyzing the relationship between the number of ingredients and the amount of calories.
 
 ### Datasets used (food.com)
 
-The first dataset we used on this project contains recipes posted on food.com since 2008, containing 83782 rows representing each recipe posted, with each row consisting these 12 columns of descriptions: 
+The first dataset we used in this project contains recipes posted on food.com since 2008, with 83782 rows representing each recipe posted, and each row consisting these 12 columns of descriptions: 
 
 |Column	                 |Description|
 |---                     |---        |
@@ -39,11 +39,11 @@ The second dataset we used on this project contains reviews and ratings submitte
 |`'rating'`	|Rating given|
 |`'review'`	|Review text|
 
-As this project investigates the relationship between the number of ingredients and the amount of calories (#) in each recipe, the two columns we referenced the most were:
+As this project investigates the relationship between the number of ingredients and the amount of calories (#) in each recipe, the two columns we will reference the most are:
 
-1. The 'nutrition' column of the first dataset. This column contains information about the recipe in the following format: <br><br>`'[calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)]'`<br><br>To allow the calories (#) to be more accessible, we decided to create a new column called calories in the merged dataset, which we will reference instead of the entire 'nutrition' column
+1. The `'nutrition'` column of the first dataset. This column contains information about the recipe in the following format: <br><br>`'[calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)]'`<br><br>To allow the calories (#) to be more accessible, we decided to create a new column called `'calories'` in the new merged dataset, which we will reference instead of the entire `'nutrition'` column
 
-2. The  ‘n_ingredients’ column of the first dataset. This column contains the value for the number of ingredients in the recipe, which we use to compare with the calorie value of that recipe.
+2. The `'n_ingredients'` column of the first dataset. This column contains the value for the number of ingredients in the recipe, which we use to compare with the calorie value of that recipe.
 
 ---
 
