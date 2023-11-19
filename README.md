@@ -92,6 +92,7 @@ Here are the boxplots as described above – with the y-axis measuring the amoun
 
 ### Interesting Aggregates
 
+
 ---
 ## Assessment of Missingness
 
@@ -105,7 +106,7 @@ We can change the `'description'` column from NMAR to MAR if we include variable
 
 In the datasets, we noticed that there were several columns with missing values – with the `'description'` column being one of them. For our missingness analyses, we decided to investigate whether or not the missingness of `'description'` does/does not depend on `'n_steps'` (number of steps), and on `'n_ingredients.'` Running permutation tests to study the missingness, we discovered that:
 
-#### **The missingness of rating **does** depend on `'n_steps'` (((MCAR))).**
+#### **The missingness of rating **does** depend on `'n_steps'` (MCAR).**
 
 **Null Hypothesis: The missingness of description does not depend on `'n_steps'`** <br><br> **Alternative Hypothesis: The missingness of description does not depend on `'n_steps'`** 
 
@@ -115,11 +116,11 @@ Below, we have a overlayed histogram which compares the distribution of `'n_step
 
 For our test statistic, we chose to use the absolute difference in means as `'n_steps'` is a numerical variable. Running 1000 simulations of a permutation test by shuffling the `'description'` columns, we plotted the distribution of the test statistics here: 
 
-<iframe src="assets/empirical_plot.html" width=800 height=600 frameBorder=0></iframe> 
+<iframe src="assets/empirical_plot_steps.html" width=800 height=600 frameBorder=0></iframe> 
 
-In the distribution above, the red line indicates the observed test statistic of our original dataseet. From our simulations, we found that the p value is 0.24 – which if reflected on the distribution. 
+In the distribution above, the red line indicates the observed test statistic of our original dataseet. From our simulations, we found that the p value is 0.24 – which is reflected on the distribution as there is a noticable proportion of values to the right of the observed statistic.
 
-Therefore, using a significance level of 0.05, we **fail to reject** the null hypothesis – meaning that the missingness in the `'description'` column is not dependent on `'n_steps'`.
+Therefore, using a significance level of 0.05, we **fail to reject** the null hypothesis – meaning that the missingness in the `'description'` column **is not** dependent on `'n_steps'`**(MCAR)**.
 
 #### **The missingness of rating **does not** depend on `'n_ingredients'` (MAR).**
 
@@ -130,6 +131,14 @@ Therefore, using a significance level of 0.05, we **fail to reject** the null hy
 Below, we have another overlayed histogram which compares the distribution of `'n_ingredients'` when `'description'` is NaN and when it is not.
 
 <iframe src="assets/missing_desc_ingred.html" width=800 height=600 frameBorder=0></iframe> <br><br>
+
+For our test statistic, we again chose to use the absolute difference in means as `'n_ingredients'` is a numerical variable. Running 1000 simulations of a permutation test by shuffling the `'description'` columns, we plotted the distribution of the test statistics here: 
+
+<iframe src="assets/empirical_plot_ingred.html" width=800 height=600 frameBorder=0></iframe> 
+
+In the distribution above, the red line indicates the observed test statistic of our original dataseet. From our simulations, we found that the p value is 0.01 – which is reflected on the distribution as there are little to no values to the right of the observed statistic.
+
+Therefore, using a significance level of 0.05, we **reject** the null hypothesis – meaning that the missingness in the `'description'` column **is** dependent on `'n_ingredients'` **(MAR)**.
 
 
 ---
