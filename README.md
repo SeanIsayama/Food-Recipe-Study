@@ -122,7 +122,7 @@ In the distribution above, the red line indicates the observed test statistic of
 
 Therefore, using a significance level of 0.05, we **fail to reject** the null hypothesis – meaning that the missingness in the `'description'` column **is not** dependent on `'n_steps'`**(MCAR)**.
 
-#### **The missingness of rating **does not** depend on `'n_ingredients'` (MAR).**
+#### **The missingness of rating does not depend on `'n_ingredients'` (MAR).**
 
 **Null Hypothesis: The missingness of description does not depend on `'n_ingredients'`** 
 
@@ -130,7 +130,7 @@ Therefore, using a significance level of 0.05, we **fail to reject** the null hy
 
 Below, we have another overlayed histogram which compares the distribution of `'n_ingredients'` when `'description'` is NaN and when it is not.
 
-<iframe src="assets/missing_desc_ingred.html" width=800 height=600 frameBorder=0></iframe> <br><br>
+<iframe src="assets/missing_desc_ingred.html" width=800 height=600 frameBorder=0></iframe> 
 
 For our test statistic, we again chose to use the absolute difference in means as `'n_ingredients'` is a numerical variable. Running 1000 simulations of a permutation test by shuffling the `'description'` columns, we plotted the distribution of the test statistics here: 
 
@@ -140,8 +140,14 @@ In the distribution above, the red line indicates the observed test statistic of
 
 Therefore, using a significance level of 0.05, we **reject** the null hypothesis – meaning that the missingness in the `'description'` column **is** dependent on `'n_ingredients'` **(MAR)**.
 
-
 ---
+## Hypothesis Testing
+
+### Hypothesis Testing
+
+Our projects investigates the relationship between the number of ingredients (#) and amount of calories from the recipes. In our hypothesis testing, we will test for whether or not this relationship is 
+
+
 
 
 
