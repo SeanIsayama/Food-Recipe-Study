@@ -163,14 +163,12 @@ The graph below displays the empirical distribution of our test statistic in 100
 
 <iframe src="assets/empirical_plot_ingred.html" width=800 height=600 frameBorder=0></iframe> 
 
-We can observe from the 
+From the graph above, we can see that the observed statistic is most likely not coincidental, as there were no cases in the 1000 simulation that resulted a test statistic equal to or more extreme than our observed statistic. From the simulation, we also found the p-value to be 0.0, which is less than our significane level of 0.05 for this hypothesis test. Therefore, we can reject the null hypothesis: the results of the test strongly suggest that the observed differences in our samples are not due to random chance, and that 
 
-From the figure above, we see that the change in distribution we get from our observed statistics is not likely coincidental, and this is also supported by our p-value of 0 from the test that is less than our significance level of 0.05. Hence, we reject our null hypothesis.
-
-
+From the test conducted above, we conclude that our observed data in the dataset shows strong evidence against our null hypothesis that the difference in distribution of calorie preference in the two years are merely coincidental. Hence, we reject that there isn’t an increase in people’s preference to food with higher calories over the decade from 2008 to 2018. Although we cannot conclude the reason for this trend, the changes in the preference is highly likely a real trend over the last decade.
 
 
-the results of the test strongly suggest that ...
+
 
 
 
