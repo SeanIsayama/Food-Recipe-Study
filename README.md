@@ -120,7 +120,7 @@ We can change the `'description'` column from NMAR to MAR if we include variable
 
 In the datasets, we noticed that there were several columns with missing values – with the `'description'` column being one of them. For our missingness analyses, we decided to investigate whether or not the missingness of `'description'` does/does not depend on `'n_steps'` (number of steps), and on `'n_ingredients.'` Running permutation tests to study the missingness, we discovered that:
 
-#### **The missingness of rating does depend on `'n_steps'` (MCAR).**
+#### **1. The missingness of `'description'` does depend on `'n_steps'` (MCAR).**
 
 **Null Hypothesis**: The missingness of description does not depend on `'n_steps'` 
 
@@ -130,17 +130,17 @@ Below, we have a overlayed histogram which compares the distribution of `'n_step
 
 <iframe src="assets/missing_desc_steps.html" width=800 height=600 frameBorder=0></iframe> 
 
-For our initial observation, we can see that the two distripution are fairly similar, with most of the distribution overlapping.
+For our initial observation of this distribution, we can see that the two distripution are fairly similar, with most of the distribution overlapping.
 
-For our test statistic, we chose to use the absolute difference in means as `'n_steps'` is a numerical variable and since our hypothesis don't include a direction. Running 1000 simulations of a permutation test by shuffling the `'description'` columns, we plotted the distribution of the test statistics here: 
+For our test statistic, we chose to use the absolute difference in means as `'n_steps'` is a numerical variable and since our hypothesis don't include a direction. Running 1000 simulations of a permutation test by shuffling the `'description'` column, we plotted the distribution of the test statistics in the graph below: 
 
 <iframe src="assets/empirical_plot_steps.html" width=800 height=600 frameBorder=0></iframe> 
 
-In the distribution above, the red line indicates the observed test statistic of our original dataseet. From our simulations, we found that the p value is 0.24 – which is reflected on the distribution as there is a noticable proportion of values to the right of the observed statistic.
+In this distribution, the red line represents the observed test statistic of our original dataset. From our simulations, we found that the p-value is 0.24 – which is reflected on the distribution as there is a noticable proportion of values to the right of the observed statistic.
 
-Therefore, using a significance level of 0.05, we **fail to reject** the null hypothesis – meaning that the missingness in the `'description'` column **is not** dependent on `'n_steps'`**(MCAR)**.
+Therefore, since our p-value is greater then the significance level of 0.05, we **fail to reject** the null hypothesis – meaning that the missingness in the `'description'` column **is not** dependent on `'n_steps'`**(MCAR)**.
 
-#### **The missingness of rating does not depend on `'n_ingredients'` (MAR).**
+#### **2. The missingness of `'description'` does not depend on `'n_ingredients'` (MAR).**
 
 **Null Hypothesis**: The missingness of description does not depend on `'n_ingredients'`
 
@@ -150,13 +150,15 @@ Below, we have another overlayed histogram which compares the distribution of `'
 
 <iframe src="assets/missing_desc_ingred.html" width=800 height=600 frameBorder=0></iframe> 
 
-For our test statistic, we again chose to use the absolute difference in means as `'n_ingredients'` is a numerical variable and since our hypothesis don't include a direction. Running 1000 simulations of a permutation test by shuffling the `'description'` columns, we plotted the distribution of the test statistics here: 
+For our initial observation of this distribution, we can see that the two distripution are fairly similar, with most of the distribution overlapping.
+
+For our test statistic, we again chose to use the absolute difference in means as `'n_ingredients'` is a numerical variable and since our hypothesis don't include a direction. Running 1000 simulations of a permutation test by shuffling the `'description'` columns, we plotted the distribution of the test statistics in the graph below: 
 
 <iframe src="assets/empirical_plot_ingred.html" width=800 height=600 frameBorder=0></iframe> 
 
-In the distribution above, the red line indicates the observed test statistic of our original dataset. From our simulations, we found that the p value is 0.01 – which is reflected on the distribution as there are little to no values to the right of the observed statistic.
+In this distribution, the red line represents the observed test statistic of our original dataset. From our simulations, we found that the p value is 0.01 – which is reflected on the distribution as there are little to no values to the right of the observed statistic.
 
-Therefore, using a significance level of 0.05, we **reject** the null hypothesis – meaning that the missingness in the `'description'` column **is** dependent on `'n_ingredients'` **(MAR)**.
+Therefore, since our p-value is smaller than the significance level of 0.05, we **reject** the null hypothesis – meaning that the missingness in the `'description'` column **is** dependent on `'n_ingredients'` **(MAR)**.
 
 ---
 ## Hypothesis Testing
