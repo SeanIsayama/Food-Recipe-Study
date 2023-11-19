@@ -145,7 +145,32 @@ Therefore, using a significance level of 0.05, we **reject** the null hypothesis
 
 ### Hypothesis Testing
 
-Our projects investigates the relationship between the number of ingredients (#) and amount of calories from the recipes. In our hypothesis testing, we will test for whether or not this relationship is 
+Our projects investigates the relationship between the number of ingredients (#) and amount of calories from the recipes. During our bivariate analysis, we observed an increase in the amount of calories as the size of the shopping cart increased. For our hypothesis testing, we will test whether or not this observation will also be reflected in the results from the test.
+
+First, we will define each of the following:
+
+**Null Hypothesis**: the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'near_empty'` and `'overflowing'` 
+comes from the same population, and the observed differences in our samples are due to random chance
+
+
+**Alternative Hypothesis**: the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'near_empty'` is smaller than when `'shopping_cart'` is `'overflowing'`. The observed difference in our samples cannot be explained by random chance alone.
+
+**Test Statistic**: difference in group means: mean calories of recipes that are considered `'overflowing'`−mean weight of non-smokers' babies. We use difference and not the absolute difference since our alternative hypothesis indicates direction.
+
+**Significance Level**: we will use a significance level of 0.05 for our conclusion to ensure accuracy.
+
+The graph below displays the empirical distribution of our test statistic in 1000 different permutations, under the null hypothesis stated above. 
+
+<iframe src="assets/empirical_plot_ingred.html" width=800 height=600 frameBorder=0></iframe> 
+
+We can observe from the 
+
+From the figure above, we see that the change in distribution we get from our observed statistics is not likely coincidental, and this is also supported by our p-value of 0 from the test that is less than our significance level of 0.05. Hence, we reject our null hypothesis.
+
+
+
+
+the results of the test strongly suggest that ...
 
 
 
