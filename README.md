@@ -1,7 +1,9 @@
 # Food Recipe Analysis Project
 **Authors**: Hikaru Isayama, Julia Jung
+
 ## Project Overview
 This data science project investigates the relationship between the number of ingredients (#) and amount of calories from the recipes and reviews posted since 2008 on food.com.
+
 ---
 
 ## Introduction and Question Identification
