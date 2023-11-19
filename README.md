@@ -104,8 +104,7 @@ Here are the boxplots as described above – with the y-axis measuring the amoun
 
 ### Interesting Aggregates
 
-|   shopping_cart| mean<br><br>| date                |        |
-|                |   year      |
+|   shopping_cart| mean<br><br>year| date                |        |
 |---------------:|:------------|:--------------------|-------:|
 |          138.4 | snack       | 2008-11-19 00:00:00 |   2008 |
 |          595.1 | lunch       | 2012-01-26 00:00:00 |   2012 |
