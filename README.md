@@ -178,13 +178,12 @@ comes from the same population, and the observed differences in our samples are 
 
 **Significance Level**: we will use a significance level of 0.05 for our conclusion to ensure accuracy.
 
-The graph below displays the empirical distribution of our test statistic in 1000 different permutations, under the null hypothesis stated above. 
+The graph below displays the empirical distribution of our test statistic in 1000 permutations, under the null hypothesis stated above. 
 
 <iframe src="assets/empirical_plot_ingred.html" width=800 height=600 frameBorder=0></iframe> 
 
-From the graph above, we can see that the observed statistic is most likely not coincidental, as there were no cases in the 1000 simulation that resulted a test statistic equal to or more extreme than our observed statistic. From the simulation, we also found the p-value to be 0.0, which is less than our significane level of 0.05 for this hypothesis test. Therefore, we can reject the null hypothesis: the results of the test strongly suggest that the observed differences in our samples are not due to random chance, and that 
+From the graph above, we can see that the observed statistic is most likely not coincidental, as there were no cases in the 1000 simulation that resulted a test statistic equal to or more extreme than our observed statistic. From the simulation, we also found the p-value to be 0.0, which is less than our significane level of 0.05 for this hypothesis test. Therefore, we can reject the null hypothesis: the results of the test strongly suggest that the observed differences in our samples are not due to random chance, and that the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'overflowing'` tends to be greater than when `'shopping_cart'` is `'near_empty'`.
 
-From the test conducted above, we conclude that our observed data in the dataset shows strong evidence against our null hypothesis that the difference in distribution of calorie preference in the two years are merely coincidental. Hence, we reject that there isn’t an increase in people’s preference to food with higher calories over the decade from 2008 to 2018. Although we cannot conclude the reason for this trend, the changes in the preference is highly likely a real trend over the last decade.
 
 
 
