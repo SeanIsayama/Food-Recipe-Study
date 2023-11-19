@@ -84,23 +84,23 @@ As mentioned above, we were provided two different datasets to use for our study
 
 ### Univariate Analysis
 
-To display the distribution of the number of ingredients, and the distribution of  calories of each recipe in our cleaned dataset, we decided to use histograms for our graphical analysis. 
+To display the distribution of the number of ingredients, and the distribution of calories of each recipe in our cleaned dataset, we decided to use histograms for our univariate graphical analysis. 
 
 <iframe src="assets/ingredients_hist.html" width=800 height=600 frameBorder=0></iframe>
 
-Above is a histogram that shows the distribution of the number of ingredients per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 5-15 ingredient range, with most of the outliers more than the majority – leading to a right- skewed distribution. 
+Above is a histogram that shows the distribution of the number of ingredients per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 5-15 ingredient range, with most of the outliers being greater than the majority – leading to a right-skewed distribution. 
 
 <iframe src="assets/calories_hist.html" width=800 height=600 frameBorder=0></iframe>
 
-Above is another histogram that shows the distribution of the number of calories per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 0-500 calorie range, with again most of the outliers being on the greater end – leading to a right-skewed distribution. 
+Above is a histogram that shows the distribution of the number of calories per recipe in our dataset. In this histogram, we can see that the majority of recipes are within the 0-500 calorie range, with again most of the outliers being on the greater end – leading to a right-skewed distribution. 
 
 ### Bivariate Analysis
 
-To create a visual for the relationship between the number of ingredients and the amount of calories (#), we decided to use a boxplot plotting the amount of calories against `'shopping_cart'`. We chose to use this graph for the purpose of easily being able to identify the min, quartile 1, median, quartile 3, max, and any outliers for each `'shopping_cart'` value.
+To create a visual for the relationship between the number of ingredients and the amount of calories (#), we decided to use a boxplot to display the amount of calories against `'shopping_cart'`. We chose to use this graph for the purpose of easily being able to identify the five-number summary and any outliers for each `'shopping_cart'` value.
 
 <iframe src="assets/bivariate_box_plot.html" width=800 height=600 frameBorder=0></iframe>
 
-Here are the boxplots as described above – with the y-axis measuring the amount of calories, and the x-axis representing each value in the column `'shopping_cart'`. We can observe that there appears to be an increase in the values for quartile 1, median, quartile 3, and max as the size of the shopping cart increases (with the exception of the `'light'` boxplot). This information suggests that there may be a level of positive correlation between the size of `'shopping_cart'` (which represents the number of ingredients) and the amount of calories per recipe.
+Here are the boxplots as described above – with the y-axis measuring the amount of calories, and the x-axis representing each value in the column `'shopping_cart'`. We can observe that there appears to be an increase in the values for quartile 1, median, quartile 3, and max (ignoring outlisers) as the size of the shopping cart increases (with the exception of the `'light'` variable). This information suggests that there may be a level of positive correlation between the size of `'shopping_cart'` (which represents the number of ingredients) and the amount of calories per recipe.
 
 ### Interesting Aggregates
 
@@ -110,7 +110,9 @@ Here are the boxplots as described above – with the y-axis measuring the amoun
 
 ### NMAR Analysis
 
-In our dataset before we filtered, the `'description'` column could possibly be NMAR. This could be due to the reviewer’s interest in investing time or pride about the recipe, which is not measured in our dataset. For example, reviewers who have a lot of time at their hands may write descriptions for the recipes they submit, while those who do not may not. Similarly, reviewers who are more proud about the recipe they submit may be more motivated to write a description, while those who are not may omit it entirely. However, these values are not recorded in our dataset, therefore making the `'description'` column a NMAR.
+In our dataset, there are several columns that contain missing values, which could depend on a variety of factors. 
+
+One such column that possibly could be NMAR is the `'description'` column. The missingness could be due to the reviewer’s availability of time or their pride about the recipe, which is not measured in our dataset. For example, reviewers who have a lot of time at their hands may write descriptions for the recipes they submit, while those who do not may not write one. Similarly, reviewers who are more proud about the recipe they submit may be more motivated to write a description, while those who are not may omit it entirely. As these values are not recorded in our dataset, the `'description'` column is possibly an NMAR.
 
 We can change the `'description'` column from NMAR to MAR if we include variables that measure the free time reviewers have, or how proud they are of the recipe. For example, if there was a rating scale of how proud they are about the recipe they submit, the missingness of the `'description'` column could be influenced by the low values measured on this new variable. 
 
@@ -118,7 +120,7 @@ We can change the `'description'` column from NMAR to MAR if we include variable
 
 In the datasets, we noticed that there were several columns with missing values – with the `'description'` column being one of them. For our missingness analyses, we decided to investigate whether or not the missingness of `'description'` does/does not depend on `'n_steps'` (number of steps), and on `'n_ingredients.'` Running permutation tests to study the missingness, we discovered that:
 
-#### **The missingness of rating **does** depend on `'n_steps'` (MCAR).**
+#### **The missingness of rating does depend on `'n_steps'` (MCAR).**
 
 **Null Hypothesis: The missingness of description does not depend on `'n_steps'`** <br><br> **Alternative Hypothesis: The missingness of description does not depend on `'n_steps'`** 
 
