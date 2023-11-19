@@ -104,6 +104,24 @@ Here are the boxplots as described above – with the y-axis measuring the amoun
 
 ### Interesting Aggregates
 
+|   shopping_cart| mean<br><br>| date                |        |
+|                |   year      |
+|---------------:|:------------|:--------------------|-------:|
+|          138.4 | snack       | 2008-11-19 00:00:00 |   2008 |
+|          595.1 | lunch       | 2012-01-26 00:00:00 |   2012 |
+|          194.8 | snack       | 2008-12-31 00:00:00 |   2008 |
+|          194.8 | snack       | 2009-04-13 00:00:00 |   2009 |
+|          194.8 | snack       | 2013-08-02 00:00:00 |   2013 |
+
+	mean	median	min	max
+calories	calories	calories	calories
+shopping_cart				
+near empty	291.411553	180.6	0.0	2987.6
+light	356.235173	269.6	0.0	2999.8
+medium	429.935659	347.7	0.3	2998.4
+heavy	523.604491	438.1	2.5	2978.2
+full	611.110988	510.8	24.4	2766.5
+overflowing	722.479021	630.0	77.2	2935.9
 
 ---
 ## Assessment of Missingness
