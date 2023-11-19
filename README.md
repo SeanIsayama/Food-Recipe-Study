@@ -22,7 +22,7 @@ The first dataset we used in this project contains recipes posted on food.com si
 |`'contributor_id'`	     |User ID who submitted this recipe|
 |`'submitted'`	            | Date recipe was submitted|
 |`'tags'`	              |Food.com tags for recipe|
-|`'nutrition'`	          |Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein    (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value”|
+|`'nutrition'`	          |Nutrition information in the form `'[calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]'`; PDV stands for “percentage of daily value”|
 |`'n_steps'`	          |Number of steps in recipe|
 |`'steps'`	              |Text for recipe steps, in order|
 |`'description'`	     | User-provided description|
@@ -100,7 +100,7 @@ To create a visual for the relationship between the number of ingredients and th
 
 <iframe src="assets/bivariate_box_plot.html" width=800 height=600 frameBorder=0></iframe>
 
-Here are the boxplots as described above – with the y-axis measuring the amount of calories, and the x-axis representing each value in the column `'shopping_cart'`. We can observe that there appears to be an increase in the values for quartile 1, median, quartile 3, and max (ignoring outlisers) as the size of the shopping cart increases (with the exception of the `'light'` variable). This information suggests that there may be a level of positive correlation between the size of `'shopping_cart'` (which represents the number of ingredients) and the amount of calories per recipe.
+Here are the boxplots as described above – with the y-axis measuring the amount of calories, and the x-axis representing each value in the column `'shopping_cart'`. We can observe that there appears to be an increase in the values for quartile 1, median, quartile 3, and max (ignoring outliers) as the size of the shopping cart increases (with the exception of the `'light'` variable). This information suggests that there may be a level of positive correlation between the size of `'shopping_cart'` (which represents the number of ingredients) and the amount of calories per recipe.
 
 ### Interesting Aggregates
 
@@ -143,7 +143,7 @@ We can see that the mean of `'n_ingredients'` when missing `'description'` is sm
 
 Running permutation tests to study the missingness, we discovered that:
 
-#### **1. The missingness of `'description'` does depend on `'n_steps'` (MCAR).**
+#### **1. The missingness of `'description'` does not depend on `'n_steps'` (MCAR).**
 
 **Null Hypothesis**: The missingness of `'description'` does not depend on `'n_steps'` 
 
@@ -163,7 +163,7 @@ In this distribution, the red line represents the observed test statistic of our
 
 Therefore, since our p-value is greater then the significance level of 0.05, we **fail to reject** the null hypothesis – meaning that the missingness in the `'description'` column **is not** dependent on `'n_steps'`**(MCAR)**.
 
-#### **2. The missingness of `'description'` does not depend on `'n_ingredients'` (MAR).**
+#### **2. The missingness of `'description'` does depend on `'n_ingredients'` (MAR).**
 
 **Null Hypothesis**: The missingness of `'description'` does not depend on `'n_ingredients'`
 
