@@ -171,12 +171,16 @@ We will define each of the following:
 
 **Null Hypothesis**: the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'near_empty'` and `'overflowing'` 
 comes from the same population, and the observed differences in our samples are due to random chance.
+- We use `'near_empty'` and `'overflowing'` as the two distributions to compare, as it allows us to efficently compare the distributions of a recipe with a small number of ingredients against a recipe with a large number of ingredients.
 
 **Alternative Hypothesis**: the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'overflowing'` is greater than when `'shopping_cart'` is `'near_empty'`. The observed difference in our samples cannot be explained by random chance alone.
+- Since we observed how the amount of calories seemed to increase as the `'shopping_cart'` becomes larger in our bivariate analysis, we will use a directional alternative hypothesis to test this observation.
 
-**Test Statistic**: the difference in group means, calculated by: *mean calories of recipes that are considered `'overflowing'`* − *mean calories of recipes that are considered `'near_empty'`*. We use the difference in group means and not the absolute difference since our alternative hypothesis indicates direction.
+**Test Statistic**: the difference in group means, calculated by: *mean calories of recipes that are considered `'overflowing'`* − *mean calories of recipes that are considered `'near_empty'`*. 
+- We use the difference in group means and not the absolute difference since our alternative hypothesis indicates direction.
 
 **Significance Level**: we will use a significance level of 0.05 for our conclusion to ensure accuracy.
+- a common significance level for most hypothesis tests.
 
 The graph below displays the empirical distribution of our test statistic in 1000 permutations, under the null hypothesis stated above. 
 
