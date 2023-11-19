@@ -122,9 +122,9 @@ In the datasets, we noticed that there were several columns with missing values 
 
 #### **The missingness of rating does depend on `'n_steps'` (MCAR).**
 
-<u>Null Hypothesis<u>: The missingness of description does not depend on `'n_steps'` 
+**Null Hypothesis**: The missingness of description does not depend on `'n_steps'` 
 
-<u>Alternative Hypothesis<u>: The missingness of description does not depend on `'n_steps'`
+**Alternative Hypothesis**: The missingness of description does not depend on `'n_steps'`
 
 Below, we have a overlayed histogram which compares the distribution of `'n_steps'` when `'description'` is NaN and when it is not.
 
@@ -140,9 +140,9 @@ Therefore, using a significance level of 0.05, we **fail to reject** the null hy
 
 #### **The missingness of rating does not depend on `'n_ingredients'` (MAR).**
 
-<u>Null Hypothesis<u>: The missingness of description does not depend on `'n_ingredients'`
+**Null Hypothesis**: The missingness of description does not depend on `'n_ingredients'`
 
-**Alternative Hypothesis: The missingness of description does not depend on `'n_ingredients'`** 
+**Alternative Hypothesis**: The missingness of description does not depend on `'n_ingredients'`
 
 Below, we have another overlayed histogram which compares the distribution of `'n_ingredients'` when `'description'` is NaN and when it is not.
 
