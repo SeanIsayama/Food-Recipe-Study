@@ -122,9 +122,9 @@ In the datasets, we noticed that there were several columns with missing values 
 
 #### **1. The missingness of `'description'` does depend on `'n_steps'` (MCAR).**
 
-**Null Hypothesis**: The missingness of description does not depend on `'n_steps'` 
+**Null Hypothesis**: The missingness of `'description'` does not depend on `'n_steps'` 
 
-**Alternative Hypothesis**: The missingness of description does depend on `'n_steps'`
+**Alternative Hypothesis**: The missingness of `'description'` does depend on `'n_steps'`
 
 Below, we have a overlayed histogram which compares the distribution of `'n_steps'` when `'description'` is missing and when it is not.
 
@@ -142,9 +142,9 @@ Therefore, since our p-value is greater then the significance level of 0.05, we 
 
 #### **2. The missingness of `'description'` does not depend on `'n_ingredients'` (MAR).**
 
-**Null Hypothesis**: The missingness of description does not depend on `'n_ingredients'`
+**Null Hypothesis**: The missingness of `'description'` does not depend on `'n_ingredients'`
 
-**Alternative Hypothesis**: The missingness of description does depend on `'n_ingredients'`
+**Alternative Hypothesis**: The missingness of `'description'` does depend on `'n_ingredients'`
 
 Below, we have another overlayed histogram which compares the distribution of `'n_ingredients'` when `'description'` is missing and when it is not.
 
@@ -165,17 +165,16 @@ Therefore, since our p-value is smaller than the significance level of 0.05, we 
 
 ### Hypothesis Testing
 
-Our projects investigates the relationship between the number of ingredients (#) and amount of calories from the recipes. During our bivariate analysis, we observed an increase in the amount of calories as the size of the shopping cart increased. For our hypothesis testing, we will test whether or not this observation will also be reflected in the results from the test.
+Our project investigates the relationship between the number of ingredients (#) and amount of calories from the recipes. During our bivariate analysis, we observed an increase in the amount of calories as the size of the shopping cart increased. For our hypothesis testing, we will test whether or not this observation will also be reflected in the results from the test.
 
-First, we will define each of the following:
+We will define each of the following:
 
 **Null Hypothesis**: the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'near_empty'` and `'overflowing'` 
-comes from the same population, and the observed differences in our samples are due to random chance
+comes from the same population, and the observed differences in our samples are due to random chance.
 
+**Alternative Hypothesis**: the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'overflowing'` is greater than when `'shopping_cart'` is `'near_empty'`. The observed difference in our samples cannot be explained by random chance alone.
 
-**Alternative Hypothesis**: the values in the distribution of the amount of calories recorded when `'shopping_cart'` is `'near_empty'` is smaller than when `'shopping_cart'` is `'overflowing'`. The observed difference in our samples cannot be explained by random chance alone.
-
-**Test Statistic**: difference in group means: mean calories of recipes that are considered `'overflowing'`−mean weight of non-smokers' babies. We use difference and not the absolute difference since our alternative hypothesis indicates direction.
+**Test Statistic**: the difference in group means, calculated by: *mean calories of recipes that are considered `'overflowing'`* − *mean calories of recipes that are considered `'near_empty'`*. We use the difference in group means and not the absolute difference since our alternative hypothesis indicates direction.
 
 **Significance Level**: we will use a significance level of 0.05 for our conclusion to ensure accuracy.
 
