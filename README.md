@@ -1,7 +1,6 @@
 # Food Recipe Analysis Project
 **Authors**: Hikaru Isayama, Julia Jung
-Data science project from the dsc80 course as UCSD. 
-
+## Project Overview
 This data science project investigates the relationship between the number of ingredients (#) and amount of calories from the recipes and reviews posted since 2008 on food.com.
 ---
 
